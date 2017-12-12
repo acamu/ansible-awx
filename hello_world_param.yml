@@ -11,5 +11,5 @@
         msg: "The ansible slave is {{ pacman }}"
      
     - name: Check array
-      debug: var={{item}}
+      debug: {{item}}
       with_items: "{{ ghosts }}"
