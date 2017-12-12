@@ -4,9 +4,11 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-        
-    - debug:
-      msg: "The ansible slave is {{ pacman }}"
+    
+    - name: Check var
+      debug:
+        msg: "The ansible slave is {{ pacman }}"
      
-    - debug: var={{item}}
-      with_items: ghosts
+    - name: Check array
+      debug: var={{item}}
+        with_items: ghosts
