@@ -8,7 +8,7 @@
     
     - name: Check var
       debug:
-      msg: "The ansible slave is {{ pacman }}"
+        msg: "The ansible slave is {{ pacman }}"
      
     - name: Check array
       debug: var={{item}}
