@@ -1,6 +1,13 @@
 ---
 - name: Hello World Sample
   hosts: all
+  
+  vars:
+    editeur: "{{ EDITEUR|default('oracle') }}"
+    version: "{{ VERSION|default('8') }}" 
+    subversion: "{{ SUBVERSION|default('151') }}"
+  
+  
   tasks:
     - name: Hello Message
       debug:
@@ -13,3 +20,6 @@
     - name: Check array
       debug: msg={{item}}
       with_items: "{{ ghosts }}"
+      
+    - name: check jdk
+      debug: msg="jdk {editeur version subversion}"
